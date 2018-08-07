@@ -25,4 +25,7 @@
   &--b-marign-large {
     margin-bottom: 1.6em;
   }
+  &--n-t-margin {
+    margin-top: 0;
+  }
 }
