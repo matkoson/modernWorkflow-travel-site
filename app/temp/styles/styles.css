@@ -1069,3 +1069,50 @@ INSTEAD, EDIT gulp/templates/sprite */
       margin-right: 1.5rem
   }
   }
+
+.site-header {
+  padding: 10px 0;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(47,85,114, .3);
+  width: 100%;
+}
+
+.site-header__btn-container {
+    float: right;
+  }
+
+.site-header__logo {
+    position: absolute;
+    top: 0;
+    background-color: #2f5572;
+    padding: 1.5626rem 2.25rem;
+  }
+
+.primary-nav-pull-right {
+    float: right;
+    padding: 13px 0;
+  }
+
+.primary-nav ul {
+      margin: 0;
+      padding: 0;
+    }
+
+.primary-nav ul::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+
+.primary-nav li {
+      list-style: none;
+      float: left;
+      padding-right: 1.25rem;
+    }
+
+.primary-nav a {
+      text-decoration: none;
+      color: #FFF;
+      font-weight: 300;
+    }
