@@ -3,7 +3,7 @@ class Person {
     this.name = name;
     this.color = color;
   }
-    greet() {
+    greet() = function() {
       console.log(`hi there generalissimo kenobi ${this.name} ${this.color}`);
     }
 }
