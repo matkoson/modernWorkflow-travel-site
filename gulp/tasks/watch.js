@@ -11,14 +11,19 @@ gulp.task("watch",()=> {
   });
 
   watch("./app/index.html", ()=>
-browserSync.reload());
+  browserSync.reload());
 
   watch("./app/assets/styles/**/*.css", ()=>
-gulp.start("cssInject"));
+  gulp.start("cssInject"));
 
+  watch("./app/assets/scripts/**/*.js", ()=>
+  gulp.start("scriptsRefresh"));
+  
 });
 
 gulp.task('cssInject', ['styles'], function() {
   return gulp.src('./app/temp/styles/styles.css')
   .pipe(browserSync.stream());
 });
+gulp.task("scriptsRefresh",["scripts"], ()=>
+browserSync.reload());
