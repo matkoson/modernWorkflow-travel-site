@@ -106,6 +106,7 @@ var MobileMenu = function () {
     this.siteHeader = (0, _jquery2.default)(".site-header");
     this.menuIcon = (0, _jquery2.default)(".site-header__menu-icon");
     this.menuContent = (0, _jquery2.default)(".site-header__menu-content");
+    // this.menuContent = document.querySelector(".site-header__menu-content");
     this.largeHeroH1 = (0, _jquery2.default)(".large-hero__title");
     this.largeHeroH2 = (0, _jquery2.default)(".large-hero__subtitle");
     this.events();
@@ -119,11 +120,16 @@ var MobileMenu = function () {
   }, {
     key: "toggleTheMenu",
     value: function toggleTheMenu() {
-      console.log("works");
+      console.log(this.menuContent.className);
       this.menuContent.toggleClass("site-header__menu-content--is-visible");
       this.siteHeader.toggleClass("site-header--is-expanded");
       this.largeHeroH1.toggleClass("large-hero__title--hidden");
       this.largeHeroH2.toggleClass("large-hero__subtitle--hidden");
+      this.menuIcon.toggleClass("site-header__menu-icon--close-x");
+
+      // (this.menuContent.className ==="site-header__menu-content--is-visible") ?
+      // this.menuContent.className = "site-header__menu-content" :
+      // this.menuContent.className = "site-header__menu-content--is-visible" ;
     }
   }]);
 

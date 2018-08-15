@@ -479,7 +479,7 @@ a {
   }
 
 .large-hero__text-content {
-    padding-top: 88px;
+    padding-top: 50px;
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -556,12 +556,12 @@ a {
   background-color: #2f5572;
   color: #FFF;
   text-decoration: none;
-  padding: .75rem 1.2rem;
+  padding: .75rem 0.1rem;
   display: inline-block;
 
 }
 
-.btn--orange {  
+.btn--orange {
     background-color: #d59541;
   }
 
@@ -1114,7 +1114,9 @@ INSTEAD, EDIT gulp/templates/sprite */
 @media (min-width: 800px) {
 
 .site-header__btn-container {
-    float: right
+    float: right;
+    padding-right: 2rem
+    /* display: inline-block; */
   }
   }
 
@@ -1147,12 +1149,56 @@ INSTEAD, EDIT gulp/templates/sprite */
     cursor: pointer;
     width: 20px;
     height: 20px;
-    background-color: #fff;
     position: absolute;
     z-index: 1;
     top: 10px;
     right: 10px;
   }
+
+.site-header__menu-icon::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: #fff;
+      -webkit-transform-origin: 0 0;
+              transform-origin: 0 0;
+      -webkit-transition: -webkit-transform .4s ease-out;
+      transition: -webkit-transform .4s ease-out;
+      transition: transform .4s ease-out;
+      transition: transform .4s ease-out, -webkit-transform .4s ease-out;
+    }
+
+.site-header__menu-icon__middle {
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: #fff;
+      -webkit-transition: all .4s ease-out;
+      transition: all .4s ease-out;
+      -webkit-transform-origin: 0 100%;
+              transform-origin: 0 100%;
+    }
+
+.site-header__menu-icon::after {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: #fff;
+      -webkit-transform-origin: 0 0;
+              transform-origin: 0 0;
+      -webkit-transition: -webkit-transform .4s ease-out;
+      transition: -webkit-transform .4s ease-out;
+      transition: transform .4s ease-out;
+      transition: transform .4s ease-out, -webkit-transform .4s ease-out;
+    }
 
 @media (min-width: 800px) {
 
@@ -1161,7 +1207,26 @@ INSTEAD, EDIT gulp/templates/sprite */
   }
   }
 
+.site-header__menu-icon--close-x::before {
+        -webkit-transform: rotate(42deg) scaleX(1.25);
+                transform: rotate(42deg) scaleX(1.25);
+      }
+
+.site-header__menu-icon--close-x::after {
+        -webkit-transform: rotate(-40deg) scaleX(1.25)
+        translateX(-3px);
+                transform: rotate(-40deg) scaleX(1.25)
+        translateX(-3px);
+      }
+
+.site-header__menu-icon--close-x div {
+        opacity:0;
+        -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+      }
+
 .site-header__menu-content {
+    width: 100%;
     opacity: 0;
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
@@ -1179,8 +1244,8 @@ INSTEAD, EDIT gulp/templates/sprite */
       opacity: 1;
       z-index: auto;
       padding-top: 0;
-      -webkit-transform: ;
-              transform: 
+      -webkit-transform: scale(1);
+              transform: scale(1)
   }
   }
 

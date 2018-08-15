@@ -6,7 +6,7 @@
     display: block;
   }
   &__text-content {
-    padding-top: 88px;
+    padding-top: 50px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);

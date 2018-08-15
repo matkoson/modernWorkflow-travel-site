@@ -8,12 +8,15 @@
   &--is-expanded {
     background-color: rgba($mainBlue, .55);
   }
+
   mixin@ atMedium {
     background-color: rgba($mainBlue, .3);
   }
   &__btn-container {
     @mixin atMedium {
     float: right;
+    padding-right: 2rem;
+    /* display: inline-block; */
     }
   }
   &__logo {
@@ -24,6 +27,7 @@
     transform-origin: 50% 0;
     background-color: $mainBlue;
     padding: 1.5626rem 2.25rem;
+
     @mixin atMedium {
       left: auto;
       transform: translateX(0);
@@ -36,16 +40,66 @@
     cursor: pointer;
     width: 20px;
     height: 20px;
-    background-color: #fff;
     position: absolute;
     z-index: 1;
     top: 10px;
     right: 10px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: #fff;
+      transform-origin: 0 0;
+      transition: transform .4s ease-out;
+    }
+
+    &__middle {
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: #fff;
+      transition: all .4s ease-out;
+      transform-origin: 0 100%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: #fff;
+      transform-origin: 0 0;
+      transition: transform .4s ease-out;
+    }
+
     @mixin atMedium {
       display: none;
     }
+
+    &--close-x {
+      &::before {
+        transform: rotate(42deg) scaleX(1.25);
+      }
+      &::after {
+        transform: rotate(-40deg) scaleX(1.25)
+        translateX(-3px);
+      }
+      & div {
+        opacity:0;
+        transform: scaleX(0);
+      }
+    }
   }
   &__menu-content {
+    width: 100%;
     opacity: 0;
     transform: scale(1.2);
     transition: all .3s ease-out;
@@ -58,7 +112,7 @@
       opacity: 1;
       z-index: auto;
       padding-top: 0;
-      transform: ;
+      transform: scale(1);
     }
     &--is-visible {
       opacity: 1;
