@@ -13,7 +13,7 @@
   &__icon {
     display: block;
     margin: 0 auto;
-    @atSmall {
+    @mixin atSmall {
       position: absolute;
       left: 0;
     }

@@ -1,7 +1,5 @@
-let Person = require("./modules/Person");
 
-let john = new Person("Jonny", "black");
-let jane = new Person("Dżejn", "white");
+import MobileMenu from "./modules/MobileMenu";
 
-john.greet();
-jane.greet();
+
+let mobileMenu = new MobileMenu();
