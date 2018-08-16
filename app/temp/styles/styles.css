@@ -1107,8 +1107,15 @@ INSTEAD, EDIT gulp/templates/sprite */
     background-color: rgba(47,85,114, .55);
   }
 
-.site-header mixin@ atMedium {
-    background-color: rgba(47,85,114, .3);
+@media (min-width: 800px) {
+
+.site-header {
+    position: fixed;
+    background-color: rgba(47,85,114, .3)
+}
+    .site-header--dark {
+      background-color: rgba(23,51,72,.85);
+    }
   }
 
 @media (min-width: 800px) {
@@ -1137,8 +1144,16 @@ INSTEAD, EDIT gulp/templates/sprite */
 .site-header__logo {
       left: auto;
       -webkit-transform: translateX(0);
-              transform: translateX(0)
+              transform: translateX(0);
+      -webkit-transition: -webkit-transform .5s ease-out;
+      transition: -webkit-transform .5s ease-out;
+      transition: transform .5s ease-out;
+      transition: transform .5s ease-out, -webkit-transform .5s ease-out
   }
+      .site-header--dark .site-header__logo {
+        -webkit-transform: scale(0.57);
+                transform: scale(0.57);
+      }
   }
 
 .site-header__logo__graphic {
@@ -1323,6 +1338,9 @@ INSTEAD, EDIT gulp/templates/sprite */
         padding: 12px;
         background-color: transparent
     }
+        .primary-nav a.is-current-link {
+          color: #fabb69;
+        }
   }
 
 .reveal-item {

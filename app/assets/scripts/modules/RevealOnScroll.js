@@ -11,12 +11,10 @@ class RevealOnScroll {
   }
   hideInitially() {
     this.itemsToReveal.addClass("reveal-item");
-      console.log(this.itemsToReveal);
     // let currClass =this.itemsToReveal.getAttribute("class");
     // this.itemsToReveal.setAttribute("class", currClass+" reveal-item");
   }
   createWaypoints() {
-    console.log(this.classToCatch, this.offsetSet);
     let off = this.offsetSet;
     this.itemsToReveal.each(function() {
     let currIt = this;
