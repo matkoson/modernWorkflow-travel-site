@@ -3,13 +3,13 @@ import $ from "jquery";
 
 class MobileMenu {
   constructor() {
-  this.siteHeader = $(".site-header");
-  this.menuIcon = $(".site-header__menu-icon");
-  this.menuContent = $(".site-header__menu-content");
-  // this.menuContent = document.querySelector(".site-header__menu-content");
-  this.largeHeroH1 = $(".large-hero__title");
-  this.largeHeroH2 = $(".large-hero__subtitle");
-  this.events();
+    this.siteHeader = $(".site-header");
+    this.menuIcon = $(".site-header__menu-icon");
+    this.menuContent = $(".site-header__menu-content");
+    // this.menuContent = document.querySelector(".site-header__menu-content");
+    this.largeHeroH1 = $(".large-hero__title");
+    this.largeHeroH2 = $(".large-hero__subtitle");
+    this.events();
   }
   events() {
     this.menuIcon.click(this.toggleTheMenu.bind(this));
