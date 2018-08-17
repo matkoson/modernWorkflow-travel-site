@@ -6,6 +6,10 @@
   &--medium{
     max-width: 976px;
   }
+
+  &--narrow {
+    width: 470px;
+  }
   &--no-padding-until-medium {
     padding-left: 0;
     padding-right: 0;
