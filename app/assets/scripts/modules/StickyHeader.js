@@ -33,13 +33,14 @@ class StickyHeader {
     this.pageSections.each( function() {
       let currIt = this;
       console.log(that.headerLinks);
+
       new Waypoint({
         element: currIt,
         handler: (direction)=> {
-          if (direction==="down") {
+          if (direction === "down") {
           let matchingHeaderLink = currIt.getAttribute("data-matching-link");
-          that.headerLinks.removeClass("is-current-link");
-          $(matchingHeaderLink).addClass("is-current-link");
+          that.headerLinks.removeClass("is-current-link"); //REMOVE THE CLASS FROM ALL THE LINKS
+          $(matchingHeaderLink).addClass("is-current-link"); //SELECT THE div BY THE VAL OF THE CUSTOM ATTR
           }
         },
         offset:  "18%"
@@ -48,7 +49,7 @@ class StickyHeader {
       new Waypoint({
         element: currIt,
         handler: (direction)=> {
-          if (direction!=="down") {
+          if (direction !== "down") {
           let matchingHeaderLink = currIt.getAttribute("data-matching-link");
           that.headerLinks.removeClass("is-current-link");
           $(matchingHeaderLink).addClass("is-current-link");
