@@ -11334,6 +11334,9 @@ var StickyHeader = function () {
         });
       });
     }
+    //EACH SECTION, GRABBED BY THE class="page-section", CARRIES A CUTOM-data-ATTR WHICH HAS A SELECTION CONTENT FOR $(), WHICH WILL POINT TO ONE
+    //OF THE nav li a AT THE TOP OF THE PAGE, THE ONE "CONNECTED" WITH THE SECTION, AND WHEN GRABBED, THE a WILL HAVE ITS STYLE ALTERED
+
   }, {
     key: "refreshWaypoints",
     value: function refreshWaypoints() {
