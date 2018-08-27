@@ -552,11 +552,11 @@ a {
   }
   }
 
-.btn { 
+.btn {
   background-color: #2f5572;
   color: #FFF;
   text-decoration: none;
-  padding: .75rem 0.1rem;
+  padding: .75rem 0.3rem;
   display: inline-block;
 
 }
